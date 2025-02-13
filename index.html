@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h1>Tienda FullStack</h1>
+        </div>
+        <div id="carrito">
+            <label id="carrito_text" for=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+              </svg> <p id="contador">0</p> <button id="carro">Vaciar Carrito</button></label>
+        </div>
+    </header>
+    <main>
+        <div id="contenedor_items">
+            <div id="items">
+                <div class="producto" id="producto1"> <img src="https://supermercadolaestacion.com/36622-thickbox_default/papa-margarita-paquete-x-36-gramos-limon.jpg" alt=""> 
+                    <label class="nombre" for="">Papitas</label> <button class="add" onclick="agregarProductos('Papas', 'Papitas Margarita','$2000','https://supermercadolaestacion.com/36622-thickbox_default/papa-margarita-paquete-x-36-gramos-limon.jpg')">Agregar</button></div>
+                <div class="producto" id="producto2"> <img src="https://static.vecteezy.com/system/resources/previews/037/751/381/non_2x/coca-cola-plastic-bottle-isolated-on-transparent-background-free-png.png" alt=""> 
+                    <label class="nombre" for="">Coca-Cola</label> <button class="add" onclick="agregarProductos('Coca-Cola','Gaseosa','$3000','https://static.vecteezy.com/system/resources/previews/037/751/381/non_2x/coca-cola-plastic-bottle-isolated-on-transparent-background-free-png.png')">Agregar</button></div>
+                <div class="producto" id="producto3"> <img src="https://copservir.vtexassets.com/arquivos/ids/1495084/CHOCOLATE-JET-LECHE-N-1_F.png?v=638672520262270000" alt="">
+                    <label class="nombre" for="">Chocolate</label> <button class="add" onclick="agregarProductos('Chocolate','Jet','$1000','https://copservir.vtexassets.com/arquivos/ids/1495084/CHOCOLATE-JET-LECHE-N-1_F.png?v=638672520262270000')">Agregar</button></div>
+            </div>
+        </div>
+
+        <div id="contenedor_modal">
+            <div id="modal">
+                <button id="quitar_modal">X</button>
+                <h1>Articulo</h1>
+                <img alt="" src="${imagen}">
+                <h4>${nombre}</h4>
+                <h3>${descripcion}</h3>
+                <p>${precio}</p>
+            </div>
+        </div>
+
+    </main> 
+
+    <div id="itemsAgregados">
+
+    </div>
+</body>
+<script src="./scripts.js"></script>
+</html>
