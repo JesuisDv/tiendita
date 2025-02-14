@@ -1,20 +1,20 @@
 let allProducts = document.getElementById("itemsAgregados");
-let contador = document.getElementById("contador");
-let cantProductos = 0;
+let carro = document.getElementById("contador");
+let conteo = 0;
 
 function agregarProductos(nombre, descripcion, precio, imagen){
+//verificar si el producto ya fue agregado
+    let productoExistente = document.getElementById(nombre);
 
-    let productorExistente = document.getElementById('nombre');
-
-    if(productorExistente){
-        let contador = productorExistente.querySelector('.cantidad');
+    if (productoExistente) {
+        //Si lo esta, incrementa el contador
+        let contador = productoExistente.querySelector('.cantidad');
         let cantidad = parseInt(contador.textContent) + 1;
-
         contador.textContent = cantidad;
-
     }else{
+        //Si no lo esta, lo agrega
         allProducts.innerHTML += `
-        <div class="productico" onclick="modalCont(${nombre},${descripcion}, ${precio}, ${imagen})">
+        <div class="productico" id="${nombre}">
         <img alt="" src="${imagen}">
         <h4>${nombre}</h4>
         <h3>${descripcion}</h3>
@@ -25,22 +25,21 @@ function agregarProductos(nombre, descripcion, precio, imagen){
         `;
     }
 
-    cantProductos ++;
-    contador.innerHTML = cantProductos;
-    
+    conteo ++;
+    carro.innerHTML = conteo;
 }
+
+
+document.getElementById("carro").addEventListener("click", () => {
+    allProducts.innerHTML=``;
+    conteo = 0;
+    carro.innerHTML = conteo;
+});
 
 function mostrar(){
     document.getElementById("modal").style.display = "flex";
-
 };
 
 document.getElementById("quitar_modal").addEventListener("click", ()=>{
     document.getElementById("modal").style.display = "none"
-});
-
-document.getElementById("carro").addEventListener("click", () => {
-    allProducts.innerHTML=``;
-    let cantProductos = 0
-    contador.innerHTML = cantProductos;
 });

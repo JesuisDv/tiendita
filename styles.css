@@ -120,36 +120,26 @@ header{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-#producto2  img{
-    width: 60px;
-}
-
-.productico img{
-    display: flex;
-    width: 150px;
-    height: 160px;
-}
-
-.productico #producto2{
-    width: 60px;
-    height: 100px;
+img{
+    width: 100px;
+    height: 130px;
 }
 
 #modal{
     display: none;
     background-color:#1C3144;
     width: 250px;
-    height: 300px;
+    height: 350px;
     border-radius: 10px;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
     color: #A2AEBB;
-    margin-bottom:100px ;
+    /* margin-bottom:100px ; */
 
 }
 
@@ -157,6 +147,7 @@ header{
     position: fixed;
     top: 30%;
     left: 41.8%;
+    filter: blur(10);
 }
 
 .productico button{
@@ -179,7 +170,7 @@ header{
     width: 30px;
     cursor: pointer;
     position: relative;
-    bottom: 40px;
+    bottom: -20px;
     left: 100px;
 
 }
